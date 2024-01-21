@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 export default function Page() {
   return (
-    <main className='p-4'>
+    <main className='m-4'>
       <h1 className='py-4 text-center text-2xl font-bold'>
         Welcome to the Ultimate Scavenger Hunt!
       </h1>
