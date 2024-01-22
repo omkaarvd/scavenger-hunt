@@ -1,3 +1,4 @@
+import { updateScore } from './api-actions';
 import { clue_data, team_data } from './data';
 
 export const onFormSubmit = (data: FormData, id: string) => {
@@ -16,7 +17,11 @@ export const onFormSubmit = (data: FormData, id: string) => {
   }
 
   // if team group is not matched
-  if (clue_datum?.group_name !== team_group) {
+  if (
+    clue_datum?.group_name !== team_group &&
+    clue_datum?.question_no !== '5' &&
+    clue_datum?.question_no !== '6'
+  ) {
     localStorage.clear();
     localStorage.setItem(
       'group_message',
@@ -34,11 +39,23 @@ export const onFormSubmit = (data: FormData, id: string) => {
     return;
   }
 
+  if (clue_datum?.question_no === '5' || clue_datum?.question_no === '6') {
+    localStorage.clear();
+    localStorage.setItem('clue', clue_datum.clue);
+    localStorage.setItem('next_code', clue_datum.next_code);
+    // update score
+    updateScore(team_name as string, clue_datum.question_no);
+    window.location.replace('/clue');
+    return;
+  }
+
   // if team code and group name is matched
   if (clue_datum?.code === team_code && clue_datum?.group_name === team_group) {
     localStorage.clear();
     localStorage.setItem('clue', clue_datum.clue);
     localStorage.setItem('next_code', clue_datum.next_code);
+    // update score
+    updateScore(team_name as string, clue_datum.question_no);
     window.location.replace('/clue');
     return;
   }
