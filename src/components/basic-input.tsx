@@ -8,6 +8,7 @@ interface BasicInputProps extends React.InputHTMLAttributes<HTMLInputElement> {
   value?: string;
   labelClass?: string;
   inputClass?: string;
+  required?: boolean;
   onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
@@ -20,9 +21,10 @@ export default function BasicInput({
   inputClass,
   onChange,
   placeholder,
+  required,
 }: BasicInputProps) {
   return (
-    <>
+    <div>
       <label
         htmlFor={name}
         className={cn('block text-sm font-medium', labelClass)}
@@ -37,8 +39,12 @@ export default function BasicInput({
         placeholder={placeholder}
         id={name}
         autoComplete='off'
-        className={cn('block w-full p-2 text-black', inputClass)}
+        className={cn(
+          'my-1 block w-full rounded-lg border p-2 text-sm font-medium text-black',
+          inputClass
+        )}
+        required={required}
       />
-    </>
+    </div>
   );
 }
