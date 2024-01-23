@@ -14,13 +14,16 @@ export default async function Page() {
   function formatTime(timestamp: string): string {
     const time = new Date(timestamp);
   
-    const hours = time.getHours().toString().padStart(2, '0');
-    const minutes = time.getMinutes().toString().padStart(2, '0');
-    const seconds = time.getSeconds().toString().padStart(2, '0');
-    const milliseconds = time.getMilliseconds().toString().padStart(3, '0');
-
-    console.log(`${hours}:${minutes}:${seconds}:${milliseconds}`);
-    return `${hours}:${minutes}:${seconds}:${milliseconds}`;
+    const options: Intl.DateTimeFormatOptions = {
+      timeZone: 'Asia/Kolkata',
+      hour12: true,
+      hour: '2-digit',
+      minute: '2-digit',
+      second: '2-digit',
+      fractionalSecondDigits: 3,
+    };
+  
+    return time.toLocaleString('en-IN', options);
   }
 
   return (
@@ -47,7 +50,7 @@ export default async function Page() {
               <tr key={team.name}>
                 <td className='whitespace-nowrap px-6 py-4'>{team.name}</td>
                 <td className='whitespace-nowrap px-6 py-4'>{`${team.score}%`}</td>
-                <td className='whitespace-nowrap px-6 py-4'>{`${formatTime(team.updatedAt)}%`}</td>
+                <td className='whitespace-nowrap px-6 py-4'>{`${formatTime(team.updatedAt)}`}</td>
               </tr>
             ))}
           </tbody>
