@@ -11,7 +11,7 @@ export default async function Page() {
 
   const { data } = await getData();
 
-  function formatTime(timestamp) {
+  function formatTime(timestamp: string): string {
     const time = new Date(timestamp);
   
     const hours = time.getHours().toString().padStart(2, '0');
