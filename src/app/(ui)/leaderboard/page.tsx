@@ -43,7 +43,7 @@ export default async function Page() {
             </tr>
           </thead>
           <tbody className='divide-y divide-gray-200 bg-white text-base text-black'>
-            {data.teams.map((team: { name: string; score: number }) => (
+            {data.teams.map((team: { name: string; score: number, updatedAt: string }) => (
               <tr key={team.name}>
                 <td className='whitespace-nowrap px-6 py-4'>{team.name}</td>
                 <td className='whitespace-nowrap px-6 py-4'>{`${team.score}%`}</td>
