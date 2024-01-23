@@ -102,7 +102,7 @@ export const clue_data = [
   {
     id: 'jN6jdu4LZfvFKR0So66G74sJ82G2fuOP1MQz7',
     question_no: '4',
-    clue: '-... .-.. ..- .',
+    clue: '-...   .-..  ..-   .    in canteen',
     clue_image: "",
     group_name: 'c',
     code: 'G4EFGY',
