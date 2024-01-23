@@ -26,6 +26,18 @@ export default async function Page() {
     return time.toLocaleString('en-IN', options);
   }
 
+  const sortedTeams = data.teams.sort((a, b) => {
+    // First, compare by score in descending order
+    if (b.score !== a.score) {
+      return b.score - a.score;
+    }
+  
+    // If scores are equal, compare by updatedAt in descending order
+    const timeA = new Date(a.updatedAt).getTime();
+    const timeB = new Date(b.updatedAt).getTime();
+    return timeB - timeA;
+  });
+
   return (
     <div className='flex min-h-screen flex-col items-center bg-white py-2'>
       <h1 className='mb-4 text-2xl font-bold'>Leaderboard</h1>
@@ -46,7 +58,7 @@ export default async function Page() {
             </tr>
           </thead>
           <tbody className='divide-y divide-gray-200 bg-white text-base text-black'>
-            {data.teams.map((team: { name: string; score: number, updatedAt: string }) => (
+            {sortedTeams.map((team: { name: string; score: number, updatedAt: string }) => (
               <tr key={team.name}>
                 <td className='whitespace-nowrap px-6 py-4'>{team.name}</td>
                 <td className='whitespace-nowrap px-6 py-4'>{`${team.score}%`}</td>
