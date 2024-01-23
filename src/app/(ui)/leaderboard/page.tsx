@@ -10,7 +10,18 @@ export default async function Page() {
   noStore();
 
   const { data } = await getData();
-  console.log(data.teams);
+
+  function formatTime(timestamp) {
+    const time = new Date(timestamp);
+  
+    const hours = time.getHours().toString().padStart(2, '0');
+    const minutes = time.getMinutes().toString().padStart(2, '0');
+    const seconds = time.getSeconds().toString().padStart(2, '0');
+    const milliseconds = time.getMilliseconds().toString().padStart(3, '0');
+
+    console.log(`${hours}:${minutes}:${seconds}:${milliseconds}`);
+    return `${hours}:${minutes}:${seconds}:${milliseconds}`;
+  }
 
   return (
     <div className='flex min-h-screen flex-col items-center bg-white py-2'>
@@ -26,6 +37,9 @@ export default async function Page() {
               <th className='px-6 py-3 text-left text-xs font-bold uppercase tracking-wider text-gray-500'>
                 Score
               </th>
+              <th className='px-6 py-3 text-left text-xs font-bold uppercase tracking-wider text-gray-500'>
+                Done at
+              </th>
             </tr>
           </thead>
           <tbody className='divide-y divide-gray-200 bg-white text-base text-black'>
@@ -33,6 +47,7 @@ export default async function Page() {
               <tr key={team.name}>
                 <td className='whitespace-nowrap px-6 py-4'>{team.name}</td>
                 <td className='whitespace-nowrap px-6 py-4'>{`${team.score}%`}</td>
+                <td className='whitespace-nowrap px-6 py-4'>{`${formatTime(team.updatedAt)}%`}</td>
               </tr>
             ))}
           </tbody>
