@@ -35,7 +35,7 @@ export default async function Page() {
     // If scores are equal, compare by updatedAt in descending order
     const timeA = new Date(a.updatedAt).getTime();
     const timeB = new Date(b.updatedAt).getTime();
-    return timeB - timeA;
+    return timeA - timeB;
   });
 
   return (
