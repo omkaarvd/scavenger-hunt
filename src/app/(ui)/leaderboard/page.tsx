@@ -26,7 +26,7 @@ export default async function Page() {
     return time.toLocaleString('en-IN', options);
   }
 
-  const sortedTeams = data.teams.sort((a, b) => {
+  const sortedTeams = data.teams.sort((a: { name: string; score: number; updatedAt: string }, b: { name: string; score: number; updatedAt: string }) => {
     // First, compare by score in descending order
     if (b.score !== a.score) {
       return b.score - a.score;
