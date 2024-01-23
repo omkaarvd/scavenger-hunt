@@ -43,6 +43,8 @@ export const onFormSubmit = (data: FormData, id: string) => {
     localStorage.clear();
     localStorage.setItem('clue', clue_datum.clue);
     localStorage.setItem('next_code', clue_datum.next_code);
+    localStorage.setItem('clue_image', clue_datum.clue_image);
+
     // update score
     updateScore(team_name as string, clue_datum.question_no);
     window.location.replace('/clue');
@@ -54,6 +56,8 @@ export const onFormSubmit = (data: FormData, id: string) => {
     localStorage.clear();
     localStorage.setItem('clue', clue_datum.clue);
     localStorage.setItem('next_code', clue_datum.next_code);
+    localStorage.setItem('clue_image', clue_datum.clue_image);
+
     // update score
     updateScore(team_name as string, clue_datum.question_no);
     window.location.replace('/clue');

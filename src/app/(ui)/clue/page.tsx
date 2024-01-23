@@ -3,6 +3,7 @@
 import Loader from '@/components/loader';
 import Error from '@/components/error';
 import { useEffect, useState } from 'react';
+import Image from 'next/image';
 
 export default function Page() {
   const [isLoading, setIsLoading] = useState(true);
@@ -11,6 +12,7 @@ export default function Page() {
   const [group_message, setGroupMessage] = useState('');
   const [team_message, setTeamMessage] = useState('');
   const [team_code_umatched, setTeamCodeUnmatched] = useState('');
+  const [clueImage, setClueImage] = useState('');
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -22,6 +24,7 @@ export default function Page() {
     setGroupMessage(localStorage.getItem('group_message') as string);
     setTeamMessage(localStorage.getItem('team_message') as string);
     setTeamCodeUnmatched(localStorage.getItem('team_code_umatched') as string);
+    setClueImage(localStorage.getItem('clue_image') as string);
 
     return () => clearTimeout(timer);
   }, []);
@@ -30,7 +33,7 @@ export default function Page() {
     return <Loader />;
   }
 
-  if (!clue || !next_code) {
+  if (!clue && !next_code) {
     // if clue and next_code are not found, then show why not found
     return (
       <>
@@ -52,7 +55,15 @@ export default function Page() {
     <div className='mx-6 my-12 flex flex-col items-center justify-center gap-24 text-center'>
       <div>
         <h1 className='text-2xl font-bold'>Clue</h1>
-        <p className='text-lg'>{clue}</p>
+        {clue? <p className='text-lg'>{clue}</p>: null}
+        {clueImage? <Image
+        alt='Clue Image'
+        src={clueImage}
+        priority={true}
+        width={500}
+        height={500}
+        className='mt-2 mb-6'
+      />: null}
       </div>
 
       <div>
