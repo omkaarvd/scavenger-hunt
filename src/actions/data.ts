@@ -99,7 +99,7 @@ export const clue_data = [
     next_code: 'G4EHGY',
   },
   {
-    id: 'jN6jdu4LZfvFKR0So66G74sJ82G2fuOP1MQz7',
+    id: 'jN6jdu4LZfvFKR0So66G74sJ82G2fuOP1MQz',
     question_no: '4',
     clue: 'Albert Einstein was good at Physics',
     clue_image: '',
