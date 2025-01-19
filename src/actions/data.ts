@@ -29,7 +29,7 @@ export const clue_data = [
   {
     id: 'tDdHYlfkTdZQIsLSEKfXWXiO6w0aGQtv5Hp8I',
     question_no: '4',
-    clue: '-... .-.. ..- . / -.-. .. .--. .... . .-.',
+    clue: '.---- ----- / .-.-. / ...-- / - . .-. .-. .- -.-. .',
     clue_image: '',
     group_name: 'a',
     code: 'G4EFGY',
@@ -56,7 +56,7 @@ export const clue_data = [
   {
     id: 'jSu1n0g7CQR8fYdpAZO8jWB0KCODJ57KAm32J',
     question_no: '3',
-    clue: '.---- ----- / .-.-. / ...-- / - . .-. .-. .- -.-. .',
+    clue: `Boîte à Suggestions d'Ingénierie`,
     clue_image: '',
     group_name: 'b',
     code: 'E3XYZH',
@@ -65,7 +65,7 @@ export const clue_data = [
   {
     id: 'C3zxg7OLG0m75siTj4aNqisXPmfCatTRvz7jK',
     question_no: '4',
-    clue: `Boîte à Suggestions d'Ingénierie`,
+    clue: `.---- ----- / .-.-. / ...-- / - . .-. .-. .- -.-. .`,
     clue_image: '',
     group_name: 'b',
     code: 'G4LMNY',
@@ -101,7 +101,7 @@ export const clue_data = [
   {
     id: 'jN6jdu4LZfvFKR0So66G74sJ82G2fuOP1MQz',
     question_no: '4',
-    clue: 'Albert Einstein was good at Physics',
+    clue: '.---- ----- / .-.-. / ...-- / - . .-. .-. .- -.-. .',
     clue_image: '',
     group_name: 'c',
     code: 'G4EHGY',
