@@ -7,7 +7,7 @@ export default function Page() {
         Welcome to the Ultimate Scavenger Hunt!
       </h1>
       <Image
-        src='https://res.cloudinary.com/omkardate/image/upload/v1705478530/cesa/event/ongoing/scavenger/main.jpg'
+        src='/scavenger.png'
         width={500}
         height={500}
         alt='Scavenger Hunt'

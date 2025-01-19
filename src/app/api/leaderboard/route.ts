@@ -1,9 +1,9 @@
 import { connectDB } from '@/db';
 import Leaderboard from '@/db/model';
 
-connectDB();
-
 export async function PUT(request: Request) {
+  connectDB();
+
   const { team_name, level } = await request.json();
 
   const countScore = Math.floor((parseInt(level) / 6) * 100);
@@ -54,6 +54,8 @@ export async function PUT(request: Request) {
 }
 
 export async function GET() {
+  connectDB();
+
   try {
     const data = await Leaderboard.findOne({
       _id: '65ae7bfcde758bdca1c5c1f6',
