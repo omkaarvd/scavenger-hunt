@@ -4,8 +4,8 @@ export const clue_data = [
     question_no: '1',
     group_name: 'a',
     code: 'A1DEFG',
-    clue: 'Desi londo ka kamra',
-    clue_image: '',
+    clue: '🦷+🏢+🚌',
+    clue_image: '/dental-flower.jpg',
     next_code: 'C2XYZE',
   },
   {
