@@ -11,8 +11,8 @@ export const clue_data = [
   {
     id: '11PSZUCEX5HVLNcfxeNTpfdDX3snUxS2iHR5c',
     question_no: '2',
-    clue: 'I was a PM and born on 2nd October 1904, find me!',
-    clue_image: '',
+    clue: '',
+    clue_image: '/cbum.png',
     group_name: 'a',
     code: 'C2XYZE',
     next_code: 'E3UVWX',
@@ -20,8 +20,8 @@ export const clue_data = [
   {
     id: '2tfPTAIGxr77NU8eOWfSq7FbEZZ8vpqGFavnk',
     question_no: '3',
-    clue: '',
-    clue_image: '/dental.jpg',
+    clue: '"2" places where are laid, find the "0" notice board where "3" ragging is forbidden.',
+    clue_image: '',
     group_name: 'a',
     code: 'E3UVWX',
     next_code: 'G4EFGY',
@@ -29,7 +29,7 @@ export const clue_data = [
   {
     id: 'tDdHYlfkTdZQIsLSEKfXWXiO6w0aGQtv5Hp8I',
     question_no: '4',
-    clue: '-... .-.. ..- .',
+    clue: '-... .-.. ..- . / -.-. .. .--. .... . .-.',
     clue_image: '',
     group_name: 'a',
     code: 'G4EFGY',
@@ -38,8 +38,8 @@ export const clue_data = [
   {
     id: 'Ihx6ujplKXi9k93jSLwv20Nvn42brsN4n6R0M',
     question_no: '1',
-    clue: '"2" places where are laid, find the "0" notice board where "3" ragging is forbidden.',
-    clue_image: '',
+    clue: 'Follow the sign pointing the way, where the path begins near the corner and leads you toward the Dental College & Hospital.',
+    clue_image: '/dental.jpg',
     group_name: 'b',
     code: 'A1XYZE',
     next_code: 'C2ABCX',
@@ -47,8 +47,8 @@ export const clue_data = [
   {
     id: 'tDS4NYa4XxRxbAAFUcSfVMWtZbZLmt9TRytDc',
     question_no: '2',
-    clue: '',
-    clue_image: '/319.jpg',
+    clue: 'Malam patti karlo guys, konsa ye room.',
+    clue_image: '',
     group_name: 'b',
     code: 'C2ABCX',
     next_code: 'E3XYZH',
@@ -56,8 +56,8 @@ export const clue_data = [
   {
     id: 'jSu1n0g7CQR8fYdpAZO8jWB0KCODJ57KAm32J',
     question_no: '3',
-    clue: '',
-    clue_image: '/workshop.jpg',
+    clue: '.---- ----- / .-.-. / ...-- / - . .-. .-. .- -.-. .',
+    clue_image: '',
     group_name: 'b',
     code: 'E3XYZH',
     next_code: 'G4LMNY',
@@ -65,7 +65,7 @@ export const clue_data = [
   {
     id: 'C3zxg7OLG0m75siTj4aNqisXPmfCatTRvz7jK',
     question_no: '4',
-    clue: '-... .-.. ..- .',
+    clue: `Boîte à Suggestions d'Ingénierie`,
     clue_image: '',
     group_name: 'b',
     code: 'G4LMNY',
@@ -74,7 +74,7 @@ export const clue_data = [
   {
     id: 'kjFFfvGsvMZ3oti3jfLgKIphnQLTqWWkLnTx3',
     question_no: '1',
-    clue: 'Malam patti karlo guys, konsa ye room.',
+    clue: 'Just like mitochondria energy ka source hai, wahan jao jahan meri identity check hoti hai',
     clue_image: '',
     group_name: 'c',
     code: 'A1HIJS',
@@ -83,8 +83,8 @@ export const clue_data = [
   {
     id: 'Fa7jz5nuijUMHl5fZZzNLZuwY9MVNi8cchOZz',
     question_no: '2',
-    clue: 'Albert Einstein was good at Physics',
-    clue_image: '',
+    clue: 'Smithy Shop',
+    clue_image: '/smithy.png',
     group_name: 'c',
     code: 'C2DEFZ',
     next_code: 'E3LMNH',
@@ -92,8 +92,8 @@ export const clue_data = [
   {
     id: 'lgSDyHUZm4RyWMGGPvjFuuRTEhbnPYxuXVA3t',
     question_no: '3',
-    clue: '',
-    clue_image: '/door.jpg',
+    clue: `Staff drive's crazy - 2500`,
+    clue_image: '',
     group_name: 'c',
     code: 'E3LMNH',
     next_code: 'G4EHGY',
@@ -101,7 +101,7 @@ export const clue_data = [
   {
     id: 'jN6jdu4LZfvFKR0So66G74sJ82G2fuOP1MQz7',
     question_no: '4',
-    clue: '-...   .-..  ..-   .    in canteen',
+    clue: 'Albert Einstein was good at Physics',
     clue_image: '',
     group_name: 'c',
     code: 'G4EHGY',
@@ -110,7 +110,7 @@ export const clue_data = [
   {
     id: '7aFZZLVAIYo6PH9YWDYcqTT0FFxhcdqlPjkKd',
     question_no: '5',
-    clue: 'End is where you start',
+    clue: 'Penguins Really Enjoy Sliding In Dark, Eerie Night Time.',
     clue_image: '',
     group_name: 'abc',
     code: 'U5ABCL',
