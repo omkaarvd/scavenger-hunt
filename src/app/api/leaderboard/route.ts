@@ -1,16 +1,16 @@
 import { connectDB } from '@/db';
 import Leaderboard from '@/db/model';
 
-export async function PUT(request: Request) {
-  connectDB();
+connectDB();
 
+export async function PUT(request: Request) {
   const { team_name, level } = await request.json();
 
   const countScore = Math.floor((parseInt(level) / 6) * 100);
 
   try {
     const teamData = await Leaderboard.findOne({
-      _id: '65ae7bfcde758bdca1c5c1f6',
+      _id: '678e0a3be2d9cf9a94ad32f9',
     });
 
     const isTeamAlreadyExists = teamData.teams.find(
@@ -19,7 +19,7 @@ export async function PUT(request: Request) {
 
     if (!isTeamAlreadyExists) {
       await Leaderboard.findOneAndUpdate(
-        { _id: '65ae7bfcde758bdca1c5c1f6' },
+        { _id: '678e0a3be2d9cf9a94ad32f9' },
         { $push: { teams: { name: team_name, score: countScore } } },
         { new: true }
       );
@@ -28,7 +28,7 @@ export async function PUT(request: Request) {
 
     await Leaderboard.findOneAndUpdate(
       {
-        _id: '65ae7bfcde758bdca1c5c1f6',
+        _id: '678e0a3be2d9cf9a94ad32f9',
         'teams.name': team_name,
       },
       {
@@ -41,7 +41,7 @@ export async function PUT(request: Request) {
 
     if (level === '6' && countScore === 100 && !teamData.winner) {
       await Leaderboard.findOneAndUpdate(
-        { _id: '65ae7bfcde758bdca1c5c1f6' },
+        { _id: '678e0a3be2d9cf9a94ad32f9' },
         { $set: { winner: team_name } },
         { new: true }
       );
@@ -54,12 +54,12 @@ export async function PUT(request: Request) {
 }
 
 export async function GET() {
-  connectDB();
-
   try {
     const data = await Leaderboard.findOne({
-      _id: '65ae7bfcde758bdca1c5c1f6',
+      _id: '678e0a3be2d9cf9a94ad32f9',
     });
+
+    console.log({ data });
 
     return Response.json({ status: 'success', data });
   } catch (error) {
