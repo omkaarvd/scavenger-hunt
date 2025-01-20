@@ -7,5 +7,4 @@ export const updateScore = async (team_name: string, level: string) => {
     body: JSON.stringify({ team_name, level }),
   });
   const data = await res.json();
-  console.log(data);
 };

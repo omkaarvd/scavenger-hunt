@@ -59,8 +59,6 @@ export async function GET() {
       _id: '678e0a3be2d9cf9a94ad32f9',
     });
 
-    console.log({ data });
-
     return Response.json({ status: 'success', data });
   } catch (error) {
     return Response.json({ status: 'error', error });
